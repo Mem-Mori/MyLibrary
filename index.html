@@ -1,0 +1,43 @@
+<html>
+        <head>
+                <meta charset="utf-8">
+                <meta name="author" content="MemMori">
+                <title>My Library</title>
+                <link rel="stylesheet" href="stylesheet.css">
+                <link rel="stylesheet" href="reset.css">
+        </head>
+
+        <body>
+                <div id="nav">
+                        <div id="form">
+                                <form method="GET">
+                                        <label class="label">Book's Title:</label>
+                                                <input type="text" class="formInput" id="bookTitle" placeholder="Title"><br>
+                                        <label class="label">Book's Author:</label>
+                                                <input type="text" class="formInput" id="bookAuthor" placeholder="Author"><br>
+                                        <label class="label">Total Pages:</label>
+                                                <input type="number" class="formInput" id="bookPages" placeholder="100"><br>
+                                        <label class="label">Completion Status:</label>
+                                                <input type="radio" id="read" name="bookStatus" value="Read">
+                                                        <label for="read">Read</label>
+                                                <input type="radio" id="notRead" name="bookStatus" value="Not Read">
+                                                        <label for="notRead">Not Read</label><br><br>
+                                        <input id="createBook" type="button" value="Add Book">
+                                </form>
+                        </div>
+                        
+                        <div id="header">
+                                <h2>My Library</h2>
+                                <p id="topLink">A project with <a id="linkA" href="https://www.theodinproject.com" target="_blank">The Odin Project</a></p>
+                                <p id="author">Created by <a id="mori" href="https://github.com/Mem-Mori" target="_blank">MemMori</a></p>
+                        </div>
+                </div>
+
+                <div id="bookShelf">
+
+                </div>
+        </body>
+
+        <script src="script.js"></script>
+
+</html>
