@@ -125,8 +125,6 @@ document.getElementById('createBook').addEventListener('click', function() {
         displayBook();
 })
 
-//Test connection.
-
 /*
 idea to have authors name link to google search
 https://www.google.com/search?q=
