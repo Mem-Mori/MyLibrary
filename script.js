@@ -94,6 +94,7 @@ for (const button of buttons) {
 
 //create new book div from form entry
 document.getElementById('createBook').addEventListener('click', function() {
+        
         let bTitle = document.querySelector('#bookTitle').value;
         let bAuthor = document.querySelector('#bookAuthor').value;
         let bPages = document.querySelector('#bookPages').value;
@@ -105,24 +106,28 @@ document.getElementById('createBook').addEventListener('click', function() {
                 }
         }
 
-        addBookToLibrary(bTitle, bAuthor, bPages, bStatus());
+        if (bTitle !== '' && bAuthor !== '' && bPages !== '' && bStatus() !== undefined) {
+                addBookToLibrary(bTitle, bAuthor, bPages, bStatus());
 
-        document.querySelector('#bookTitle').value = '';
-        document.querySelector('#bookAuthor').value = '';
-        document.querySelector('#bookPages').value = '';
-        let radioClear = function() {
-                let radio = document.getElementsByName('bookStatus');
-                for(i = 0; i < radio.length; i++) {
-                        if(radio[i].checked)
-                                radio[i].checked = false;
+                document.querySelector('#bookTitle').value = '';
+                document.querySelector('#bookAuthor').value = '';
+                document.querySelector('#bookPages').value = '';
+                let radioClear = function() {
+                        let radio = document.getElementsByName('bookStatus');
+                        for(i = 0; i < radio.length; i++) {
+                                if(radio[i].checked)
+                                        radio[i].checked = false;
+                        }
                 }
-        }
-        
-        radioClear();        
-        
-        wipe()
+                
+                radioClear();        
+                
+                wipe()
 
-        displayBook();
+                displayBook();
+        } else {
+                alert("Please complete the form before adding a new book.")
+        }
 })
 
 /*

@@ -67,10 +67,16 @@ form {
         font-size: 14px;
         font-weight: 700;
         text-shadow: none;
+        background-color: #d1be9db6;
+        padding-bottom: 30px;
+        margin-bottom: 0px;
+        padding-right: 20px;
+        padding-top: 20px;
+        border-right: #f4efe9 5px double;
 }
 
 ::placeholder {
-        color: white;
+        color: rgb(173, 173, 173);
 }
 
 input {
@@ -83,12 +89,33 @@ input {
 }
 
 input#read, input#notRead {
-        height: 15px;
-        width: 15px;
-        border-radius: 0px;
-        border: none;
+        height: 18px;
+        width: 18px;
         margin-top: 10px;
-        
+}
+
+input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        position: relative;
+        background-color: #ffa500;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
 }
 
 input#createBook {
@@ -98,6 +125,15 @@ input#createBook {
         border: rgb(63, 53, 59) 1px solid;
         background-color: rgba(88, 75, 83, 0.76);
         color: white;
+}
+
+input#createBook:hover {
+        background-color: beige;
+        color: black;
+}
+
+input#createBook:active {
+        transform: scale(.9);
 }
 
 input[type='radio'] {
