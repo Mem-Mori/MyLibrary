@@ -74,12 +74,11 @@ addBookToLibrary('The Way of Kings', 'Brandon Sanderson', '1007', 'Not Read');
 displayBook();
 
 // delete existing divs to avoid duplicating books
-// not currently working as intended
-// function wipe() {
-//         while (container.firstChild) {
-//                 container.removeChild(container.firstChild);
-//         }
-// }
+function wipe() {
+        while (container.firstChild) {
+                container.removeChild(container.firstChild);
+        }
+}
 
 function statusChange() {
         let statusBtn = document.querySelectorAll('.bookStatus');
@@ -99,16 +98,17 @@ function statusChange() {
 statusChange();
 
 //delete button for removing book from object and div from page
-const buttons = document.querySelectorAll('.delete');
-for (const button of buttons) {
-        button.addEventListener('click', function() {
-                if (confirm("Are you sure you want to delete?")) {
-                        myLibrary.splice(button.id, 1);
-                        wipe()
-                        displayBook();
-                }
-        });
-}
+// not working as intended currently, leaving in for later review
+// const buttons = document.querySelectorAll('.delete');
+// for (const button of buttons) {
+//         button.addEventListener('click', function() {
+//                 if (confirm("Are you sure you want to delete?")) {
+//                         myLibrary.splice(button.id, 1);
+//                         wipe()
+//                         displayBook();
+//                 }
+//         });
+// }
 
 //create new book div from form entry
 document.getElementById('createBook').addEventListener('click', function() {
