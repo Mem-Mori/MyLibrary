@@ -196,6 +196,10 @@ input[type='radio'] {
         font-weight: 800;
 }
 
+.bookStatus:active {
+        transform: scale(.9);
+}
+
 .delete {
         font-family: 'Nimbus';
         font-size: 15px;
@@ -210,4 +214,8 @@ input[type='radio'] {
 .delete:hover {
         background-color: red;
         font-weight: 800;
+}
+
+.delete:active {
+        transform: scale(.9);
 }

@@ -73,12 +73,30 @@ addBookToLibrary('Brisingr', 'Christopher Paolini', '831', 'Read');
 addBookToLibrary('The Way of Kings', 'Brandon Sanderson', '1007', 'Not Read');
 displayBook();
 
-//delete existing divs to avoid duplicating books
-function wipe() {
-        while (container.firstChild) {
-                container.removeChild(container.firstChild);
-        }
+// delete existing divs to avoid duplicating books
+// not currently working as intended
+// function wipe() {
+//         while (container.firstChild) {
+//                 container.removeChild(container.firstChild);
+//         }
+// }
+
+function statusChange() {
+        let statusBtn = document.querySelectorAll('.bookStatus');
+        statusBtn.forEach((btn) => {
+                btn.addEventListener('click', (event) => {
+                        if(event.target.textContent == 'Read') {
+                                event.target.textContent = 'Not Read';
+                                myLibrary[(event.target.id).slice(-1)].read = 'Not Read'
+                        } else {
+                                event.target.textContent = 'Read';
+                                myLibrary[(event.target.id).slice(-1)].read = 'Read';
+                        }
+                })
+        })
 }
+
+statusChange();
 
 //delete button for removing book from object and div from page
 const buttons = document.querySelectorAll('.delete');
@@ -120,11 +138,11 @@ document.getElementById('createBook').addEventListener('click', function() {
                         }
                 }
                 
-                radioClear();        
-                
+                radioClear();                
                 wipe()
-
                 displayBook();
+                statusChange();                
+                
         } else {
                 alert("Please complete the form before adding a new book.")
         }
