@@ -22,12 +22,15 @@ function displayBook() {
                 const newDiv = document.createElement('div');
                 const newTitle = document.createElement('p');
                 const newAuthLabel = document.createElement('span');
-                const newAuth = document.createElement('p');
+                const newAuth = document.createElement('a');
                 const newPagesLabel = document.createElement('span');
                 const newPages = document.createElement('p');
                 const newStatus = document.createElement('button');
                 const newButton = document.createElement('button');
                 const newBreak = document.createElement('br');
+                const newBreak1 = document.createElement('br');
+                const newBreak2 = document.createElement('br');
+                const newBreak3 = document.createElement('br');
                 
                 container.appendChild(newDiv);
 
@@ -41,12 +44,19 @@ function displayBook() {
                 newAuthLabel.textContent = 'Author:';
                 newDiv.appendChild(newAuthLabel);
 
+                newDiv.appendChild(newBreak);
+
                 newAuth.textContent = myLibrary[i].author;
                 newAuth.setAttribute('class', 'bookAuthor');
+                newAuth.setAttribute('href', 'https://www.google.com/search?q=' + myLibrary[i].author.replace(/\s/g, '+'));
+                newAuth.setAttribute('target', '_blank');
                 newDiv.appendChild(newAuth);
 
+                newDiv.appendChild(newBreak1);
+                newDiv.appendChild(newBreak2);
+
                 newPagesLabel.textContent = 'Pages:';
-                newDiv.appendChild(newPagesLabel);
+                newDiv.appendChild(newPagesLabel);                
 
                 newPages.textContent = myLibrary[i].pages;
                 newPages.setAttribute('class', 'bookPages');
@@ -57,7 +67,7 @@ function displayBook() {
                 newStatus.setAttribute('id', 'status' + i);
                 newDiv.appendChild(newStatus);
 
-                newDiv.appendChild(newBreak);
+                newDiv.appendChild(newBreak3);
 
                 newButton.textContent = 'Delete';
                 newButton.setAttribute('class', 'delete');

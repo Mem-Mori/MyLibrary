@@ -22,7 +22,7 @@ body {
         border-bottom: #f4efe9 5px double;
         font-family: 'Nimbus';
         color: black;
-        text-shadow: 1px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff;
+        text-shadow: 1px 0 0 #f4efe9, 0 -1px 0 #f4efe9, 0 1px 0 #f4efe9, -1px 0 0 #f4efe9;
 }
 
 #header {
@@ -32,8 +32,9 @@ body {
 }
 
 h2 {
-        font-size: 45px;
+        font-size: 55px;
         margin-bottom: 15px;
+        text-shadow: 2px 0 0 #f4efe9, 0 -2px 0 #f4efe9, 0 2px 0 #f4efe9, -2px 0 0 #f4efe9;
 }
 
 #topLink {
@@ -148,7 +149,7 @@ input[type='radio'] {
 .book {
         background-color: #d1be9d;
         width: 175px;
-        height: 242px;
+        height: 254px;
         display: inline-block;
         padding: 10px;
         align-content: center;
@@ -157,6 +158,11 @@ input[type='radio'] {
         font-size: 14px;
         border: #f4efe9 6px double;
         color: black;
+        border-radius: 10px;
+}
+
+.book:hover {
+        transform: scale(1.025);
 }
 
 .bookTitle {
@@ -167,18 +173,24 @@ input[type='radio'] {
         font-size: 19px;
         font-weight: 800;
         line-height: 20px;
+        text-shadow: 1px 0 0 #f4efe9, 0 -1px 0 #f4efe9, 0 1px 0 #f4efe9, -1px 0 0 #f4efe9
 }
 
 .bookAuthor {
         font-size: 15px;
         font-weight: bold;
-        margin-bottom: 10px;
+        color: rgb(77, 70, 53);
+}
+
+.bookAuthor:hover {
+        color: rgb(0, 0, 150);
 }
 
 .bookPages {
-        font-size: 15px;
+        font-size: 16px;
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        color: rgb(77, 70, 53);
 }
 
 .bookStatus {
@@ -189,6 +201,7 @@ input[type='radio'] {
         height: 30px;
         margin-bottom: 10px;
         border: black 1px solid;
+        border-radius: 5px;
 }
 
 .bookStatus:hover {
@@ -209,6 +222,7 @@ input[type='radio'] {
         background-color: rgb(168, 89, 89);
         color: white;
         border: black 1px solid;
+        border-radius: 5px;
 }
 
 .delete:hover {
